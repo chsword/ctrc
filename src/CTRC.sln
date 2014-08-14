@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRC", "CTRC.csproj", "{A51F5E5E-63E6-48C5-B324-85A522E505ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRC", "CTRC\CTRC.csproj", "{A51F5E5E-63E6-48C5-B324-85A522E505ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRC.Tests", "CTRC.Tests\CTRC.Tests.csproj", "{037830BB-825F-40DA-B266-BEC8358B158D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A51F5E5E-63E6-48C5-B324-85A522E505ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51F5E5E-63E6-48C5-B324-85A522E505ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51F5E5E-63E6-48C5-B324-85A522E505ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037830BB-825F-40DA-B266-BEC8358B158D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037830BB-825F-40DA-B266-BEC8358B158D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037830BB-825F-40DA-B266-BEC8358B158D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037830BB-825F-40DA-B266-BEC8358B158D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
