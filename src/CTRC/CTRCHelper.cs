@@ -1,15 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 
 namespace CTRC
 {
     public class CTRCHelper
     {
-        public static EnumFlunt<T> GetEmnum<T>() where T :Enum{
-            return new EnumFlunt<T>();
+ 
+        public static PropertyInfo[] GetPropertiesCache<T>()
+        {
+            return PropertiesCache<T>.Propertys;
+        }
+
+        public static TAttribute GetCustomAttribute<TAttribute>(PropertyInfo prop) where TAttribute : Attribute
+        {
+            return PropertyAttributeCache<TAttribute>.GetCustomAttribute(prop);
+        }
+        public static TAttribute[] GetCustomAttributes<TAttribute>(MemberInfo prop) where TAttribute : Attribute
+        {
+            return MemberInfoAttributeCache<TAttribute>.GetCustomAttributes(prop);
         }
     }
 }
