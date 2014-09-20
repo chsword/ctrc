@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace CTRC
+namespace CTRC.Cache
 {
     static class PropertyAttributeCache<T> where T : Attribute
     {

@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace CTRC
+namespace CTRC.Cache
 {
     static class PropertiesCache<T>
     {

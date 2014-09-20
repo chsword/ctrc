@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace CTRC
+namespace CTRC.Cache
 {
     static class MemberInfoAttributeCache<T> where T : Attribute
     {
