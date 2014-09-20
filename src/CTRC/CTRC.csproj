@@ -39,11 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTRCFluent.cs" />
     <Compile Include="CTRCHelper.cs" />
-    <Compile Include="MemberInfoAttributeCache.cs" />
-    <Compile Include="PropertiesCache.cs" />
+    <Compile Include="Cache\MemberInfoAttributeCache.cs" />
+    <Compile Include="Cache\PropertiesCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyAttributeCache.cs" />
+    <Compile Include="Cache\PropertyAttributeCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fluent\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
