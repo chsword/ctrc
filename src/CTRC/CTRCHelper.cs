@@ -23,7 +23,7 @@ namespace CTRC
 
         public static MemberInfo[] GetMemberInfos<T>()
         {
-            return MemberInfoCache.GetMemberInfos<T>();
+            return MemberInfoCache<T>.MemberInfos;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CTRC.Tests
 {
@@ -15,7 +13,7 @@ namespace CTRC.Tests
 
         [TestMethod]
         public void GetMemberInfosTest()
-        {   // 225 to 25 ms
+        {   // 225 to 25 ms to5
             for (int i = 0; i < 100000; i++)
             {
                 var mem = CTRCHelper.GetMemberInfos<TestEnum>();
