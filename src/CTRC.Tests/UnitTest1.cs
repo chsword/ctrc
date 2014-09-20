@@ -10,14 +10,16 @@ namespace CTRC.Tests
         Value2=2
     }
     [TestClass]
-    public class UnitTest1
+    public class MemberInfoTest
     {
-       
+
         [TestMethod]
-        public void TestMethod1()
-        {
-            var stopwatch = new Stopwatch();
-            stopwatch.e
+        public void GetMemberInfosTest()
+        {   // 225 to 25 ms
+            for (int i = 0; i < 100000; i++)
+            {
+                var mem = CTRCHelper.GetMemberInfos<TestEnum>();
+            }
         }
     }
 }

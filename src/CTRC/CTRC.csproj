@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\MemberInfoCache.cs" />
     <Compile Include="CTRCFluent.cs" />
     <Compile Include="CTRCHelper.cs" />
     <Compile Include="Cache\MemberInfoAttributeCache.cs" />
