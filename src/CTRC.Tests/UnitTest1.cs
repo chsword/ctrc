@@ -9,7 +9,7 @@ namespace CTRC.Tests
     }
     class MyClass
     {
-        public void Test1() { }
+       public void Test1() { }
         public void Test1(int i) { }
         public void Test1(int i,int j) { }
     }
@@ -32,7 +32,7 @@ namespace CTRC.Tests
         {   // 225 to 25 ms to5
             for (int i = 0; i < MaxTime; i++)
             {
-                var mem = CTRCHelper.GetMemberInfos<TestEnum>();
+                var mem = CTRCHelper.GetMemberInfos<MyClass>();
             }
         }
     }
