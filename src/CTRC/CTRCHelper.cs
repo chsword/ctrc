@@ -20,5 +20,10 @@ namespace CTRC
         {
             return MemberInfoAttributeCache<TAttribute>.GetCustomAttributes(prop);
         }
+
+        public static MemberInfo[] GetMemberInfos<T>()
+        {
+            return typeof(T).GetMembers();
+        }
     }
 }
