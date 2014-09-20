@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\MemberInfoCache.cs" />
+    <Compile Include="Cache\MethodInfoCache.cs" />
     <Compile Include="CTRCFluent.cs" />
     <Compile Include="CTRCHelper.cs" />
     <Compile Include="Cache\MemberInfoAttributeCache.cs" />

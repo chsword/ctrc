@@ -25,5 +25,9 @@ namespace CTRC
         {
             return MemberInfoCache<T>.MemberInfos;
         }
+        public static MethodInfo[] GetMethodInfos<T>()
+        {
+            return MethodInfoCache<T>.MethodInfos;
+        }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace CTRC.Cache
 {
@@ -11,7 +9,5 @@ namespace CTRC.Cache
         {
             MemberInfos = typeof(T).GetMembers();
         }
-
-     
     }
 }
