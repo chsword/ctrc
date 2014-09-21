@@ -1,6 +1,6 @@
 ﻿namespace CTRC
 {
-    public class CTRCFluent
+      class CTRCFluent
     {
          
     }
