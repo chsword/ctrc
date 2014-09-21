@@ -9,7 +9,7 @@ namespace CTRC
  
         public static PropertyInfo[] GetPropertiesCache<T>()
         {
-            return PropertiesCache<T>.Propertys;
+            return PropertiesCache<T>.Properties;
         }
 
         public static TAttribute GetCustomAttribute<TAttribute>(PropertyInfo prop) where TAttribute : Attribute
@@ -28,6 +28,11 @@ namespace CTRC
         public static MethodInfo[] GetMethodInfos<T>()
         {
             return MethodInfoCache<T>.MethodInfos;
+        }
+
+        public static FieldInfo[] GetFieldInfos<T>()
+        {
+            return FieldInfoCache<T>.FieldInfos;
         }
     }
 }

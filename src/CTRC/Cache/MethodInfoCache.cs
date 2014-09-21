@@ -9,6 +9,6 @@ namespace CTRC.Cache
             MethodInfos = typeof(T).GetMethods();
         }
 
-        public static MethodInfo[] MethodInfos { get; private set; }
+        public static MethodInfo[] MethodInfos;
     }
 }

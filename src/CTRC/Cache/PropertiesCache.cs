@@ -6,9 +6,9 @@ namespace CTRC.Cache
     {
         static PropertiesCache()
         {
-            Propertys = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            Properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
         }
 
-        public static PropertyInfo[] Propertys { get; private set; }
+        public static PropertyInfo[] Properties;
     }
 }
