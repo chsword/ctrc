@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Reflection;
 
 namespace CTRC.Cache
 {
     static class PropertyAttributeCache<T> where T : Attribute
     {
-        static Dictionary<PropertyInfo, T> CacheDict { get; set; }
+        static ConcurrentDictionary<PropertyInfo, T> CacheDict { get; set; }
         static PropertyAttributeCache()
         {
-            CacheDict = new Dictionary<PropertyInfo, T>();
+            CacheDict = new ConcurrentDictionary<PropertyInfo, T>();
         }
 
         public static T GetCustomAttribute(PropertyInfo prop)
