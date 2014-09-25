@@ -3,20 +3,6 @@ using System.Diagnostics;
 
 namespace CTRC.Tests
 {
-    enum TestEnum
-    {
-        Value1=1,
-        Value2=2
-    }
-    class MyClass
-    {
-       public void Test1() { }
-        public void Test1(int i) { }
-        public void Test1(int i,int j) { }
-        public int _atc = 1;
-        public int _atc2 = 1;
-       // public int _atc3 = 1;
-    }
     [TestClass]
     public class MemberInfoTest
     {
