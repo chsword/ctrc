@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
 namespace CTRC.Tests
@@ -23,6 +24,14 @@ namespace CTRC.Tests
             for (int i = 0; i < MaxTime; i++)
             {
                 var mem = CTRCHelper.GetMemberInfos<MyClass>();
+            }
+        }
+        [TestMethod]
+        public void GetMemberInfoTest()
+        {   // 225 to 25 ms to5
+            for (int i = 0; i < MaxTime; i++)
+            {
+                var mem = CTRCHelper.GetMemberInfos<MyClass>().FirstOrDefault(c=>c.Name=="Test1");
             }
         }
         [TestMethod]
