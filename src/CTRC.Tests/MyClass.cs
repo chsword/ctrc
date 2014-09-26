@@ -12,5 +12,10 @@
         public int _atc = 1;
         public int _atc2 = 1;
         // public int _atc3 = 1;
+
+        public T Generic<T>(T t)
+        {
+            return t;
+        }
     }
 }

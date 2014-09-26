@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -57,7 +58,7 @@ namespace CTRC.Tests
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             var dict =
-                CTRCHelper.GetMemberInfos<MyClass>()
+                CTRCHelper.GetMethodInfos<MyClass>()
                     .ToDictionary(c => c, t => new Dictionary<string, Func<int, int>>
                     {
                         {"a", (i) => i + 12},
@@ -66,12 +67,15 @@ namespace CTRC.Tests
                          {"d", (i) => i + 12},
                          {"e", (i) => i + 12}
                     });
-            var key = CTRCHelper.GetMemberInfos<MyClass>().Last();
+            var key = CTRCHelper.GetMethodInfos<MyClass>().LastOrDefault(c => c.Name == "Generic");
             Console.WriteLine(dict.Count);
             Console.WriteLine(stopwatch.ElapsedMilliseconds);
-            
+            var d = EqualityComparer<MethodInfo>.Default;
             for (int i = 0; i < MaxTime; i++)
             {
+              //  var t= d.GetHashCode(key);
+                
+                //var t = key.Equals(dict.Keys.First());
                 var t = dict[key]["a"];
             }
             Console.WriteLine(stopwatch.ElapsedMilliseconds);
