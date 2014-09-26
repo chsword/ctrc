@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
@@ -46,6 +49,32 @@ namespace CTRC.Tests
                 //var t = string.Empty;
             }
    
+        }
+
+        [TestMethod]
+        public void MyTestMethod()
+        {
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            var dict =
+                CTRCHelper.GetMemberInfos<MyClass>()
+                    .ToDictionary(c => c, t => new Dictionary<string, Func<int, int>>
+                    {
+                        {"a", (i) => i + 12},
+                        {"b", (i) => i + 12},
+                        {"c", (i) => i + 12},
+                         {"d", (i) => i + 12},
+                         {"e", (i) => i + 12}
+                    });
+            var key = CTRCHelper.GetMemberInfos<MyClass>().Last();
+            Console.WriteLine(dict.Count);
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+            
+            for (int i = 0; i < MaxTime; i++)
+            {
+                var t = dict[key]["a"];
+            }
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
         }
     }
 }
