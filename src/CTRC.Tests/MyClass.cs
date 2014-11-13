@@ -1,5 +1,10 @@
 ﻿namespace CTRC.Tests
 {
+    internal class MyClass1
+    {
+        public int atc = 0;
+    }
+
     class MyClass
     {
         public void Test1() { }

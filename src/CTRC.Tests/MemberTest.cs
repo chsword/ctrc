@@ -51,6 +51,17 @@ namespace CTRC.Tests
             }
    
         }
+        [TestMethod]
+        public void GetDifferentMemberInfosTest()
+        {
+
+
+            var t = CTRCHelper.GetMemberInfos<MyClass>();
+            Console.WriteLine(t);
+
+            var t1 = CTRCHelper.GetMemberInfos<MyClass1>();
+            Console.WriteLine(t1);
+        }
 
         [TestMethod]
         public void MyTestMethod()
