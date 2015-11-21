@@ -6,7 +6,11 @@ namespace CTRC
 {
     public class CTRCHelper
     {
- 
+        public static Version GetExecutingAssemblyVersion()
+        {
+            return ExecutingAssemblyCache.Version;
+        }
+
         public static PropertyInfo[] GetPropertiesCache<T>()
         {
             return PropertiesCache<T>.Properties;

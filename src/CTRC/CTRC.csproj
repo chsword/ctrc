@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\ExecutingAssemblyCache.cs" />
     <Compile Include="Cache\FieldInfoCache.cs" />
     <Compile Include="Cache\MemberInfoCache.cs" />
     <Compile Include="Cache\MethodInfoCache.cs" />
