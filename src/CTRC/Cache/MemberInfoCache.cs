@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 
 namespace CTRC.Cache
 {
@@ -7,7 +8,7 @@ namespace CTRC.Cache
         static public MemberInfo[] MemberInfos;
         static MemberInfoCache()
         {
-            MemberInfos = typeof(T).GetMembers();
+            MemberInfos = typeof (T).GetTypeInfo().DeclaredMembers.ToArray();
         }
     }
 }
