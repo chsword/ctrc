@@ -31,7 +31,7 @@ namespace CTRC.Tests
         [TestMethod]
         public void MethodCountTest()
         {
-            var methods = CTRCHelper.GetMethodInfos<string>();
+            var methods = CTRCHelper.GetMethodInfos<MethodTestClass1>();
             foreach (var m in methods)
             {
                 Console.WriteLine(m.Name);
