@@ -52,11 +52,15 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MemberTest.cs" />
-    <Compile Include="MyClass.cs" />
+    <Compile Include="MethodTest.cs" />
+    <Compile Include="Models\MethodTestModel.cs" />
+    <Compile Include="Models\MethodModel.cs" />
+    <Compile Include="Models\FieldModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyTest.cs" />
-    <Compile Include="TestEnum.cs" />
-    <Compile Include="AssTest.cs" />
+    <Compile Include="Models\TestEnum.cs" />
+    <Compile Include="ProformanceTest.cs" />
+    <Compile Include="Models\PropertyTestModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

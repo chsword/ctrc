@@ -18,8 +18,7 @@ namespace CTRC.Tests
             //60ms 2 11ms
             for (int i = 0; i < MaxTime; i++)
             {
-                //typeof(MyClass).GetMethods();
-                var mem = CTRCHelper.GetMethodInfos<MyClass>();
+                var mem = CTRCHelper.GetMethodInfos<MethodModel>();
             }
         }
         [TestMethod]
@@ -27,7 +26,7 @@ namespace CTRC.Tests
         {   // 225 to 25 ms to5
             for (int i = 0; i < MaxTime; i++)
             {
-                var mem = CTRCHelper.GetMemberInfos<MyClass>();
+                var mem = CTRCHelper.GetMemberInfos<MethodModel>();
             }
         }
         [TestMethod]
@@ -35,7 +34,7 @@ namespace CTRC.Tests
         {   // 225 to 25 ms to5
             for (int i = 0; i < MaxTime; i++)
             {
-                var mem = CTRCHelper.GetMemberInfos<MyClass>().FirstOrDefault(c=>c.Name=="Test1");
+                var mem = CTRCHelper.GetMemberInfos<MethodModel>().FirstOrDefault(c=>c.Name=="Test1");
             }
         }
         [TestMethod]
@@ -46,7 +45,7 @@ namespace CTRC.Tests
             {
                // var t= typeof(MyClass).GetFields();
 
-                var t=CTRCHelper.GetFieldInfos<MyClass>();
+                var t=CTRCHelper.GetFieldInfos<MethodModel>();
                 //var t = string.Empty;
             }
    
@@ -56,10 +55,10 @@ namespace CTRC.Tests
         {
 
 
-            var t = CTRCHelper.GetMemberInfos<MyClass>();
+            var t = CTRCHelper.GetMemberInfos<MethodModel>();
             Console.WriteLine(t);
 
-            var t1 = CTRCHelper.GetMemberInfos<MyClass1>();
+            var t1 = CTRCHelper.GetMemberInfos<FieldModel>();
             Console.WriteLine(t1);
         }
 
@@ -69,7 +68,7 @@ namespace CTRC.Tests
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             var dict =
-                CTRCHelper.GetMethodInfos<MyClass>()
+                CTRCHelper.GetMethodInfos<MethodModel>()
                     .ToDictionary(c => c, t => new Dictionary<string, Func<int, int>>
                     {
                         {"a", (i) => i + 12},
@@ -78,7 +77,7 @@ namespace CTRC.Tests
                          {"d", (i) => i + 12},
                          {"e", (i) => i + 12}
                     });
-            var key = CTRCHelper.GetMethodInfos<MyClass>().LastOrDefault(c => c.Name == "Generic");
+            var key = CTRCHelper.GetMethodInfos<MethodModel>().LastOrDefault(c => c.Name == "Generic");
             Console.WriteLine(dict.Count);
             Console.WriteLine(stopwatch.ElapsedMilliseconds);
             var d = EqualityComparer<MethodInfo>.Default;

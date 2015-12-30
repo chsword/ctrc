@@ -5,11 +5,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CTRC.Tests
 {
     [TestClass]
-    public class AssTest
+    public class ProformanceTest
     {
         int MaxTime = 10000000;
         [TestMethod]
-        public void TestMethod1()
+        public void GetExecutingAssemblyVersionTest()
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();

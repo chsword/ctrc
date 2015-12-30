@@ -1,11 +1,6 @@
 ﻿namespace CTRC.Tests
 {
-    internal class MyClass1
-    {
-        public int atc = 0;
-    }
-
-    class MyClass
+    class MethodModel
     {
         public void Test1() { }
         public void Test1(int i) { }
