@@ -12,8 +12,8 @@
     <!--<TargetFrameworkIdentifier>.NETPortable</TargetFrameworkIdentifier>-->
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile75</TargetFrameworkProfile>
-    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <DefaultLanguage>zh-CN</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
