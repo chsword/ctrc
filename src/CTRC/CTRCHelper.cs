@@ -20,11 +20,14 @@ namespace CTRC
         {
             return PropertyAttributeCache<TAttribute>.GetCustomAttribute(prop);
         }
-        public static TAttribute[] GetCustomAttributes<TAttribute>(MemberInfo prop) where TAttribute : Attribute
+        public static TAttribute[] GetCustomAttributes<TAttribute>(MemberInfo method) where TAttribute : Attribute
         {
-            return MemberInfoAttributeCache<TAttribute>.GetCustomAttributes(prop);
+            return MemberInfoAttributeCache<TAttribute>.GetCustomAttributes(method);
         }
-
+        public static TAttribute[] GetCustomAttributes<TAttribute>(FieldInfo field) where TAttribute : Attribute
+        {
+            return FieldInfoAttributeCache<TAttribute>.GetCustomAttributes(field);
+        }
         public static MemberInfo[] GetMemberInfos<T>()
         {
             return MemberInfoCache<T>.MemberInfos;

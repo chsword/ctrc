@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Linq;
+using System.Reflection;
 
 namespace CTRC.Cache
 {
@@ -6,7 +7,7 @@ namespace CTRC.Cache
     {
         static FieldInfoCache()
         {
-            FieldInfos = new FieldInfo[] { };//typeof(T).GetFields();
+            FieldInfos = typeof(T).GetTypeInfo().DeclaredFields.ToArray();
         }
         public static FieldInfo[] FieldInfos;
     }

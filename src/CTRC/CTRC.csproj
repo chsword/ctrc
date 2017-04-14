@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\ExecutingAssemblyCache.cs" />
+    <Compile Include="Cache\FieldInfoAttributeCache.cs" />
     <Compile Include="Cache\FieldInfoCache.cs" />
     <Compile Include="Cache\MemberInfoCache.cs" />
     <Compile Include="Cache\MethodInfoCache.cs" />
@@ -57,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CTRC.nuspec" />
-    <None Include="project.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

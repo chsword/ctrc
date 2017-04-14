@@ -5,7 +5,7 @@ namespace CTRC.Cache
 {
     class MemberInfoCache<T>
     {
-        static public MemberInfo[] MemberInfos;
+        public static MemberInfo[] MemberInfos;
         static MemberInfoCache()
         {
             MemberInfos = typeof (T).GetTypeInfo().DeclaredMembers.ToArray();

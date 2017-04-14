@@ -1,8 +1,14 @@
-﻿namespace CTRC.Tests
+﻿using System.ComponentModel;
+
+namespace CTRC.Tests
 {
     enum TestEnum
     {
-        Value1=1,
-        Value2=2
+        [Description("0")]
+        Value0 = 0,
+        [Description("x")]
+        Value1 = 1,
+        [Description("y")]
+        Value2 = 2
     }
 }

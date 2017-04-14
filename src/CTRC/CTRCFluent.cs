@@ -1,7 +1,7 @@
 ﻿namespace CTRC
 {
-      class CTRCFluent
+    class CTRCFluent
     {
-         
+
     }
 }

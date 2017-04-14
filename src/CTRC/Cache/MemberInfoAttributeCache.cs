@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -14,14 +13,14 @@ namespace CTRC.Cache
             CacheDict = new ConcurrentDictionary<MemberInfo, T[]>();
         }
 
-        public static T[] GetCustomAttributes(MemberInfo prop)
+        public static T[] GetCustomAttributes(MemberInfo method)
         {
-            if (!CacheDict.ContainsKey(prop))
+            if (!CacheDict.ContainsKey(method))
             {
-                var attr = prop.GetCustomAttributes(typeof(T), false).Select(c => c as T).ToArray();
-                CacheDict[prop] = attr;
+                var attr = method.GetCustomAttributes(typeof(T), false).Select(c => c as T).ToArray();
+                CacheDict[method] = attr;
             }
-            return CacheDict[prop];
+            return CacheDict[method];
         }
 
     }
