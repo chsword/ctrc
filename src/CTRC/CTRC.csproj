@@ -46,7 +46,6 @@
     <Compile Include="Cache\FieldInfoCache.cs" />
     <Compile Include="Cache\MemberInfoCache.cs" />
     <Compile Include="Cache\MethodInfoCache.cs" />
-    <Compile Include="CTRCFluent.cs" />
     <Compile Include="CTRCHelper.cs" />
     <Compile Include="Cache\MemberInfoAttributeCache.cs" />
     <Compile Include="Cache\PropertiesCache.cs" />
