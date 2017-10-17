@@ -14,5 +14,4 @@
     <RepositoryUrl>http://chsword.github.io/ctrc/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-
 </Project>
