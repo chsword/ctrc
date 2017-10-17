@@ -1,7 +1,12 @@
 version: 1.6.0.{build}
 image: Visual Studio 2017
+init:
+- ps: $env:buildVersion = "$env:packageVersion.$env:appveyor_build_number"
+- ps: Update-AppveyorBuild -Version $env:buildVersion
 before_build:
 - cmd: dotnet restore ./src
+- ps: >-
+    sc .\src\CTRC\CTRC.csproj $(gc .\src\CTRC\CTRC.csproj).replace('<Version>1.0.0</Version>','<Version>' + $env:buildVersion + '</Version>')
 build:
   verbosity: minimal
 deploy: off
