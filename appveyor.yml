@@ -6,9 +6,7 @@ init:
 before_build:
 - cmd: dotnet restore ./src
 - ps: >-
-    write $env:version
-
-    sc .\src\CTRC\CTRC.csproj $(gc .\src\CTRC\CTRC.csproj).replace('<Version>1.0.0</Version>','<Version>' + $env:buildVersion + '</Version>')
+    sc .\src\CTRC\CTRC.csproj $(gc .\src\CTRC\CTRC.csproj).replace('<Version>1.0.0</Version>','<Version>' + $env:version + '</Version>')
 build:
   verbosity: minimal
 deploy: off
