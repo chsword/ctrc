@@ -12,7 +12,7 @@ namespace CTRC.Tests
     public class MemberInfoTest
     {
         int MaxTime = 10000000;
-        [TestMethod]
+        [TestMethod] 
         public void GetMethodInfosTest()
         {
             //60ms 2 11ms

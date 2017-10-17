@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CTRC.Tests</RootNamespace>
     <AssemblyName>CTRC.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CTRC\CTRC.csproj">
-      <Project>{a51f5e5e-63e6-48c5-b324-85a522e505ed}</Project>
+      <Project>{f1b04493-f473-42ac-8de5-40e001757cfc}</Project>
       <Name>CTRC</Name>
     </ProjectReference>
   </ItemGroup>
