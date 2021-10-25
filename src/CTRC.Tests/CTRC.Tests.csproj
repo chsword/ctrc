@@ -54,6 +54,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="EnumTest.cs" />
+    <Compile Include="FieldTest.cs" />
+    <Compile Include="MemberInfoTest.cs" />
     <Compile Include="MemberTest.cs" />
     <Compile Include="MethodTest.cs" />
     <Compile Include="Models\MethodTestModel.cs" />

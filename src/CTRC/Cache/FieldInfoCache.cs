@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 
 namespace CTRC.Cache
@@ -11,4 +12,13 @@ namespace CTRC.Cache
         }
         public static FieldInfo[] FieldInfos;
     }
+
+    class FieldInfoCache
+    {
+        public FieldInfoCache(Type type)
+        {
+            FieldInfos = type.GetTypeInfo().DeclaredFields.ToArray();
+        }
+        public FieldInfo[] FieldInfos { get; set; }
+    }   
 }

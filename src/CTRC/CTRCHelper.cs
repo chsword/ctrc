@@ -16,6 +16,11 @@ namespace CTRC
             return PropertiesCache<T>.Properties;
         }
 
+        public static PropertyInfo[] GetPropertiesCache(Type type)
+        {
+            return new PropertiesCache(type).Properties;
+        }
+
         public static TAttribute GetCustomAttribute<TAttribute>(PropertyInfo prop) where TAttribute : Attribute
         {
             return PropertyAttributeCache<TAttribute>.GetCustomAttribute(prop);
@@ -32,14 +37,30 @@ namespace CTRC
         {
             return MemberInfoCache<T>.MemberInfos;
         }
+
+        public static MemberInfo[] GetMemberInfos(Type type)
+        {
+            return new MemberInfoCache(type).MemberInfos;
+        }
+
         public static MethodInfo[] GetMethodInfos<T>()
         {
             return MethodInfoCache<T>.MethodInfos;
         }
 
+        public static MethodInfo[] GetMethodInfos(Type type)
+        {
+            return new MethodInfoCache(type).MethodInfos;
+        }
+
         public static FieldInfo[] GetFieldInfos<T>()
         {
             return FieldInfoCache<T>.FieldInfos;
+        }
+
+        public static FieldInfo[] GetFieldInfos(Type type)
+        {
+            return new FieldInfoCache(type).FieldInfos;
         }
     }
 }

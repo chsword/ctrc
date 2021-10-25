@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
 
 namespace CTRC.Cache
@@ -14,5 +15,15 @@ namespace CTRC.Cache
         }
 
         public static MethodInfo[] MethodInfos;
+    }
+
+    class MethodInfoCache
+    {
+        public MethodInfoCache(Type type)
+        {
+            MethodInfos = type.GetTypeInfo().DeclaredMethods.ToArray();
+        }
+
+        public MethodInfo[] MethodInfos { get; set; }
     }
 }
