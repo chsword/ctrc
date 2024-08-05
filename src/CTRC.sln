@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRC.Tests", "CTRC.Tests\CTRC.Tests.csproj", "{037830BB-825F-40DA-B266-BEC8358B158D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTRC.Tests", "CTRC.Tests\CTRC.Tests.csproj", "{037830BB-825F-40DA-B266-BEC8358B158D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTRC", "CTRC\CTRC.csproj", "{F1B04493-F473-42AC-8DE5-40E001757CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CTRC", "CTRC\CTRC.csproj", "{F1B04493-F473-42AC-8DE5-40E001757CFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F75B168-960D-4BCC-818B-D4D749C3FF90}"
 	ProjectSection(SolutionItems) = preProject

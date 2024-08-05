@@ -3,11 +3,11 @@ namespace CTRC.Tests
 {
     enum TestEnum
     {
-        [Description("0")]
+        [System.ComponentModel.Description("0")]
         Value0 = 0,
-        [Description("x")]
+        [System.ComponentModel.Description("x")]
         Value1 = 1,
-        [Description("y")]
+        [System.ComponentModel.Description("y")]
         Value2 = 2
     }
 }
