@@ -6,19 +6,10 @@ namespace CTRC.Cache;
 
 internal static class PropertyAttributeCache<T> where T : Attribute
 {
-    static PropertyAttributeCache()
-    {
-        CacheDict = new ConcurrentDictionary<PropertyInfo, T>();
-    }
-
-    private static ConcurrentDictionary<PropertyInfo, T> CacheDict { get; }
+    private static readonly ConcurrentDictionary<PropertyInfo, T> CacheDict = new();
 
     public static T GetCustomAttribute(PropertyInfo prop)
     {
-        if (CacheDict.TryGetValue(prop, out var attribute)) return attribute;
-        var attr = prop.GetCustomAttribute<T>();
-        CacheDict[prop] = attr;
-
-        return CacheDict[prop];
+        return CacheDict.GetOrAdd(prop, p => p.GetCustomAttribute<T>());
     }
 }

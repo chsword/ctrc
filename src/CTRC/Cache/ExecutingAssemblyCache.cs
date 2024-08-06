@@ -3,11 +3,10 @@ using System.Reflection;
 
 namespace CTRC.Cache;
 
-internal class ExecutingAssemblyCache
+internal static class ExecutingAssemblyCache
 {
-    private static Version _version;
+    private static readonly Lazy<Version> _version = new(() =>
+        typeof(ExecutingAssemblyCache).GetTypeInfo().Assembly.GetName().Version);
 
-    public static Version Version =>
-        _version ??= _version = typeof(ExecutingAssemblyCache).GetTypeInfo()
-            .Assembly.GetName().Version;
+    public static Version Version => _version.Value;
 }

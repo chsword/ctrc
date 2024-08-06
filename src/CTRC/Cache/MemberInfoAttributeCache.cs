@@ -7,19 +7,10 @@ namespace CTRC.Cache;
 
 internal static class MemberInfoAttributeCache<T> where T : Attribute
 {
-    static MemberInfoAttributeCache()
-    {
-        CacheDict = new ConcurrentDictionary<MemberInfo, T[]>();
-    }
-
-    private static ConcurrentDictionary<MemberInfo, T[]> CacheDict { get; }
+    private static readonly ConcurrentDictionary<MemberInfo, T[]> CacheDict = new();
 
     public static T[] GetCustomAttributes(MemberInfo member)
     {
-        if (CacheDict.TryGetValue(member, out var attributes)) return attributes;
-        var attr = member.GetCustomAttributes(typeof(T), false).Cast<T>().ToArray();
-        CacheDict[member] = attr;
-
-        return attr;
+        return CacheDict.GetOrAdd(member, m => m.GetCustomAttributes(typeof(T), false).Cast<T>().ToArray());
     }
 }
