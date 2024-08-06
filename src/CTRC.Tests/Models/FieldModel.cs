@@ -1,7 +1,6 @@
-namespace CTRC.Tests
+namespace CTRC.Tests;
+
+internal class FieldModel
 {
-    internal class FieldModel
-    {
-        public int atc = 0;
-    }
+    public int atc = 0;
 }

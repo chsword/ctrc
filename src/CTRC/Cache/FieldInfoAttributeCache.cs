@@ -3,26 +3,26 @@ using System.Collections.Concurrent;
 using System.Linq;
 using System.Reflection;
 
-namespace CTRC.Cache
+namespace CTRC.Cache;
+
+internal static class FieldInfoAttributeCache<T> where T : Attribute
 {
-    static class FieldInfoAttributeCache<T> where T : Attribute
+    static FieldInfoAttributeCache()
     {
-        static ConcurrentDictionary<FieldInfo, T[]> CacheDict { get; set; }
-        static FieldInfoAttributeCache()
+        CacheDict = new ConcurrentDictionary<FieldInfo, T[]>();
+    }
+
+    private static ConcurrentDictionary<FieldInfo, T[]> CacheDict { get; }
+
+    public static T[] GetCustomAttributes(FieldInfo field)
+    {
+        if (!CacheDict.TryGetValue(field, out var attributes))
         {
-            CacheDict = new ConcurrentDictionary<FieldInfo, T[]>();
+            var attr = field.GetCustomAttributes(typeof(T), false).Select(c => c as T).ToArray();
+            CacheDict[field] = attr;
+            return attr;
         }
 
-        public static T[] GetCustomAttributes(FieldInfo field)
-        {
-            if (!CacheDict.ContainsKey(field))
-            {
-                var attr = field.GetCustomAttributes(typeof(T), false).Select(c => c as T).ToArray();
-                CacheDict[field] = attr;
-                return attr;
-            }
-            return CacheDict[field];
-        }
-
+        return attributes;
     }
 }

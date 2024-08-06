@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Reflection;
 
-namespace CTRC.Cache
+namespace CTRC.Cache;
+
+internal class ExecutingAssemblyCache
 {
-    internal class ExecutingAssemblyCache
-    {
-        private static Version _version;
+    private static Version _version;
 
-        public static Version Version =>
-            _version ?? (_version =
-                _version = typeof(ExecutingAssemblyCache).GetTypeInfo()
-                    .Assembly.GetName().Version
-
-                );
-    }
+    public static Version Version =>
+        _version ??= _version = typeof(ExecutingAssemblyCache).GetTypeInfo()
+            .Assembly.GetName().Version;
 }

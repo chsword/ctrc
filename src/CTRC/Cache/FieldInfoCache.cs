@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace CTRC.Cache
+namespace CTRC.Cache;
+
+internal class FieldInfoCache<T>
 {
-    class FieldInfoCache<T>
+    public static readonly FieldInfo[] FieldInfos;
+
+    static FieldInfoCache()
     {
-        static FieldInfoCache()
-        {
-            FieldInfos = typeof(T).GetTypeInfo().DeclaredFields.ToArray();
-        }
-        public static FieldInfo[] FieldInfos;
+        FieldInfos = typeof(T).GetTypeInfo().DeclaredFields.ToArray();
     }
 }

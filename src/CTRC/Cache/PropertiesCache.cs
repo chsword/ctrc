@@ -1,18 +1,17 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace CTRC.Cache
-{
-    static class PropertiesCache<T>
-    {
-        static PropertiesCache()
-        {
-            Properties = typeof(T).GetTypeInfo()
-                .DeclaredProperties.Where(c=>c.GetMethod.IsPublic 
-            &&
-            !c.GetMethod.IsStatic).ToArray();
-        }
+namespace CTRC.Cache;
 
-        public static PropertyInfo[] Properties;
+internal static class PropertiesCache<T>
+{
+    public static PropertyInfo[] Properties;
+
+    static PropertiesCache()
+    {
+        Properties = typeof(T).GetTypeInfo()
+            .DeclaredProperties.Where(c => c.GetMethod.IsPublic
+                                           &&
+                                           !c.GetMethod.IsStatic).ToArray();
     }
 }

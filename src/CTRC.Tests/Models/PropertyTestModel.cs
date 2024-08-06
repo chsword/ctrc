@@ -1,8 +1,7 @@
-namespace CTRC.Tests
+namespace CTRC.Tests;
+
+internal class PropertyTestModel
 {
-    class PropertyTestModel
-    {
-        public int Test1 { get; set; }
-        static public int Test2 { get; set; }
-    }
+    public int Test1 { get; set; }
+    public static int Test2 { get; set; }
 }

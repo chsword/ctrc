@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using System.Reflection;
 
-namespace CTRC.Cache
+namespace CTRC.Cache;
+
+internal class MemberInfoCache<T>
 {
-    class MemberInfoCache<T>
+    public static MemberInfo[] MemberInfos;
+
+    static MemberInfoCache()
     {
-        public static MemberInfo[] MemberInfos;
-        static MemberInfoCache()
-        {
-            MemberInfos = typeof (T).GetTypeInfo().DeclaredMembers.ToArray();
-        }
+        MemberInfos = typeof(T).GetTypeInfo().DeclaredMembers.ToArray();
     }
 }

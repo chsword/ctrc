@@ -1,17 +1,16 @@
-﻿namespace CTRC.Tests
+﻿namespace CTRC.Tests;
+
+internal class MethodTestModel
 {
-    class MethodTestModel
+    public int T => 1;
+
+    public int X()
     {
-        public int X()
-        {
-            return 1;
-        }
-        public static int Y()
-        {
-            return 2;
-        }
+        return 1;
+    }
 
-        public int T => 1;
-
+    public static int Y()
+    {
+        return 2;
     }
 }
