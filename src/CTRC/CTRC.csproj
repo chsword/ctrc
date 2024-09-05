@@ -13,5 +13,18 @@
     <RepositoryUrl>http://chsword.github.io/ctrc/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <LangVersion>latest</LangVersion>
+  
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
