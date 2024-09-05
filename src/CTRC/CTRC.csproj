@@ -13,11 +13,12 @@
     <RepositoryUrl>http://chsword.github.io/ctrc/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <LangVersion>latest</LangVersion>
-  
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
   <ItemGroup>
+	  <None Include="../../README.md" Pack="true" PackagePath="" />
     <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
